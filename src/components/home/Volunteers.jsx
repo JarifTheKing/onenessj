@@ -47,9 +47,9 @@ const cardVariants = {
 const volunteerData = [
   {
     id: 1,
-    name: "Dr. Ethan Cole",
-    role: "Verified Medical Volunteer",
-    img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300&auto=format&fit=crop",
+    name: "Jarif Mahfuz",
+    role: "Verified Developer",
+    img: "/images/Jarif.jpg",
     bio: "End-to-end Tracking & Verified Platform",
   },
   {

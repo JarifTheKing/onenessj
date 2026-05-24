@@ -5,6 +5,14 @@
     scroll-behavior: smooth;
     /* This makes the color change smooth instead of a sharp jump */
     transition: background-color 0.3s ease, color 0.3s ease;
+    /* New */
+    scroll-padding-top: 60px;
+  }
+  /* Responsive override for desktop */
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 96px; /* Adjust to match your specific desktop navbar height */
+    }
   }
 
   body {
