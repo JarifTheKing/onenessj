@@ -37,7 +37,7 @@ const aboutSubLinks = [
   { name: "About Us", href: "/about", icon: Info },
   { name: "Team", href: "/about/team", icon: Users },
   { name: "Awards & Recognition", href: "/about/awards", icon: Award },
-  { name: "Contact", href: "#Contact", icon: Phone },
+  { name: "Contact", href: "/about/contact", icon: Phone },
 ];
 
 const donateSubLinks = [
