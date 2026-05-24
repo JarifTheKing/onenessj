@@ -39,10 +39,10 @@
 // export const Footer = () => {
 //   return (
 //     <footer className="relative overflow-hidden border-t border-slate-200 bg-white pt-24 pb-12 dark:border-white/10 dark:bg-black transition-colors duration-500">
-      
+
 //       {/* --- BACKGROUND AURORA (Synced with Hero) --- */}
 //       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-//         <motion.div 
+//         <motion.div
 //           animate={{
 //             scale: [1, 1.1, 1],
 //             opacity: [0.1, 0.2, 0.1],
@@ -50,7 +50,7 @@
 //           transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
 //           className="absolute -bottom-32 left-1/2 h-[500px] w-full -translate-x-1/2 bg-indigo-500/20 blur-[120px] dark:bg-indigo-600/10"
 //         />
-//         <motion.div 
+//         <motion.div
 //           animate={{ x: [-30, 30, -30], y: [0, 20, 0] }}
 //           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
 //           className="absolute bottom-0 right-[5%] h-64 w-64 rounded-full bg-[#EC9232]/10 blur-[100px]"
@@ -58,7 +58,7 @@
 //       </div>
 
 //       <div className="max-w-7xl mx-auto px-6 relative z-10">
-//         <motion.div 
+//         <motion.div
 //           initial="hidden"
 //           whileInView="visible"
 //           viewport={{ once: true, margin: "-100px" }}
@@ -70,7 +70,7 @@
 //             variants={itemVariants}
 //             className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-indigo-50/50 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-700 dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-400"
 //           >
-//             <Sparkles size={12} className="text-[#EC9232] fill-[#EC9232]/20" /> 
+//             <Sparkles size={12} className="text-[#EC9232] fill-[#EC9232]/20" />
 //             Trust through transparency
 //           </motion.div>
 
@@ -90,7 +90,7 @@
 //           </motion.div>
 
 //           {/* Slogan */}
-//           <motion.p 
+//           <motion.p
 //             variants={itemVariants}
 //             className="mt-6 max-w-lg text-sm md:text-base font-semibold leading-relaxed text-slate-700 dark:text-slate-400"
 //           >
@@ -99,7 +99,7 @@
 //           </motion.p>
 
 //           {/* Links Grid */}
-//           <motion.div 
+//           <motion.div
 //             variants={containerVariants}
 //             className="mt-12 flex flex-wrap items-center justify-center gap-3"
 //           >
@@ -117,7 +117,7 @@
 //           </motion.div>
 
 //           {/* Contact Bar (Glassmorphism Fix) */}
-//           <motion.div 
+//           <motion.div
 //             variants={itemVariants}
 //             className="mt-16 w-full max-w-2xl flex flex-col sm:flex-row gap-4 rounded-[2.5rem] border border-slate-200/60 bg-slate-50/50 p-3 backdrop-blur-md dark:border-white/10 dark:bg-white/5"
 //           >
@@ -140,7 +140,7 @@
 //         </motion.div>
 
 //         {/* Bottom Bar */}
-//         <motion.div 
+//         <motion.div
 //           initial={{ opacity: 0 }}
 //           whileInView={{ opacity: 1 }}
 //           transition={{ delay: 0.6 }}
@@ -149,7 +149,7 @@
 //           <p className="text-slate-400 dark:text-slate-500">© {new Date().getFullYear()} Oneness Project.</p>
 
 //           <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
-//             Made with <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" /> 
+//             Made with <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" />
 //             for Global Impact
 //           </div>
 
@@ -168,8 +168,6 @@
 
 // export default Footer;
 
-
-
 "use client";
 
 import React from "react";
@@ -182,7 +180,7 @@ import {
   Globe,
   Sparkles,
   Heart,
-  ShieldCheck,
+  Code2,
 } from "lucide-react";
 
 const footerLinks = [
@@ -203,20 +201,19 @@ const containerVariants = {
 
 const liftVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { type: "spring", stiffness: 100, damping: 20 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 20 },
   },
 };
 
 export const Footer = () => {
   return (
     <footer className="relative overflow-hidden border-t border-slate-200 bg-white pt-16 pb-8 dark:border-white/10 dark:bg-black transition-colors duration-500">
-      
       {/* --- REFINED COMPACT AURORA --- */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <motion.div 
+        <motion.div
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.05, 0.1, 0.05],
@@ -227,14 +224,14 @@ export const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6 items-start"
         >
-          {/* 1. Brand Section - Column 4 */}
+          {/* 1. Brand Section - Column 5 */}
           <div className="md:col-span-5 flex flex-col items-start">
             <motion.div variants={liftVariants}>
               <Link href="/" className="flex items-center gap-2.5 group">
@@ -245,19 +242,31 @@ export const Footer = () => {
                   <Rocket size={20} fill="currentColor" />
                 </motion.div>
                 <span className="text-2xl font-black tracking-tighter uppercase text-slate-950 dark:text-white">
-                  One<span className="text-indigo-600 dark:text-indigo-400">ness</span>
+                  One
+                  <span className="text-indigo-600 dark:text-indigo-400">
+                    ness
+                  </span>
                 </span>
               </Link>
               <p className="mt-4 max-w-sm text-xs font-bold leading-relaxed text-slate-600 dark:text-slate-400">
-                স্বচ্ছতা যেখানে মূল ভিত্তি। প্রতিটি অনুদান সরাসরি মানুষের জীবনে পরিবর্তন নিয়ে আসে।
+                স্বচ্ছতা যেখানে মূল ভিত্তি। প্রতিটি অনুদান সরাসরি মানুষের জীবনে
+                পরিবর্তন নিয়ে আসে।
               </p>
             </motion.div>
           </div>
 
           {/* 2. Links Section - Column 3 */}
           <div className="md:col-span-3">
-            <motion.h4 variants={liftVariants} className="text-[10px] font-black uppercase tracking-widest text-indigo-600 mb-4">Navigation</motion.h4>
-            <motion.div variants={containerVariants} className="flex flex-col gap-2.5">
+            <motion.h4
+              variants={liftVariants}
+              className="text-[10px] font-black uppercase tracking-widest text-indigo-600 mb-4"
+            >
+              Navigation
+            </motion.h4>
+            <motion.div
+              variants={containerVariants}
+              className="flex flex-col gap-2.5"
+            >
               {footerLinks.map((item) => (
                 <motion.div key={item.label} variants={liftVariants}>
                   <Link
@@ -265,7 +274,10 @@ export const Footer = () => {
                     className="group flex items-center gap-1 text-sm font-bold text-slate-800 hover:text-[#EC9232] dark:text-slate-300 dark:hover:text-[#EC9232] transition-colors"
                   >
                     {item.label}
-                    <ArrowUpRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                    <ArrowUpRight
+                      size={14}
+                      className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                    />
                   </Link>
                 </motion.div>
               ))}
@@ -274,7 +286,7 @@ export const Footer = () => {
 
           {/* 3. Dynamic Contact Card - Column 4 */}
           <div className="md:col-span-4">
-            <motion.div 
+            <motion.div
               variants={liftVariants}
               className="rounded-3xl border border-slate-200/60 bg-slate-50/50 p-4 backdrop-blur-md dark:border-white/10 dark:bg-white/5"
             >
@@ -282,7 +294,9 @@ export const Footer = () => {
                 <div className="w-8 h-8 rounded-full bg-[#EC9232]/10 flex items-center justify-center">
                   <Sparkles size={14} className="text-[#EC9232]" />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">Reach Out</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">
+                  Reach Out
+                </span>
               </div>
               <a
                 href="mailto:support@oneness.com"
@@ -298,24 +312,44 @@ export const Footer = () => {
         </motion.div>
 
         {/* REFINED BOTTOM BAR */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           className="mt-16 flex flex-col gap-6 border-t border-slate-100 pt-8 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 dark:border-white/5 sm:flex-row sm:items-center sm:justify-between"
         >
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
             <p>© {new Date().getFullYear()} Oneness.</p>
             <div className="flex items-center gap-1 text-slate-600 dark:text-slate-500">
-              Made with <Heart size={12} className="text-red-500 fill-red-500" /> 
+              Made with{" "}
+              <Heart size={12} className="text-red-500 fill-red-500" />
             </div>
+
+            {/* --- FANCY AUTHOR BADGE --- */}
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/30 font-bold lowercase tracking-normal normal-case">
+              <Code2 size={11} className="text-[#EC9232]" />
+              crafted by{" "}
+              <span className="font-black bg-gradient-to-r from-indigo-600 to-[#EC9232] bg-clip-text text-transparent dark:from-indigo-400 dark:to-[#EC9232]">
+                Jarif Mahfuz
+              </span>
+            </span>
           </div>
 
           <div className="flex items-center gap-6">
-             <div className="flex items-center gap-4">
-               <Link href="#" className="hover:text-indigo-600 transition-colors">Privacy</Link>
-               <Link href="#" className="hover:text-indigo-600 transition-colors">Terms</Link>
-             </div>
+            <div className="flex items-center gap-4">
+              <Link
+                href="#"
+                className="hover:text-indigo-600 transition-colors"
+              >
+                Privacy
+              </Link>
+              <Link
+                href="#"
+                className="hover:text-indigo-600 transition-colors"
+              >
+                Terms
+              </Link>
+            </div>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-white/5">
               <Globe size={12} className="text-[#EC9232]" /> <span>BD</span>
             </div>
