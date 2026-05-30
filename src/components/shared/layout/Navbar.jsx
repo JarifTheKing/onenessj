@@ -30,7 +30,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Activities", href: "#activities" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Join Us", href: "#connect" },
+  { name: "Join Us", href: "/joinWithUs" },
 ];
 
 const aboutSubLinks = [

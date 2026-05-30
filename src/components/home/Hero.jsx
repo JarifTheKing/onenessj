@@ -1,158 +1,3 @@
-// "use client";
-
-// import React from "react";
-// import { motion } from "framer-motion";
-// import { ArrowRight, Sparkles, ShieldCheck, Globe, Users } from "lucide-react";
-
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.1, delayChildren: 0.3 },
-//   },
-// };
-
-// const itemVariants = {
-//   hidden: { y: 20, opacity: 0 },
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     transition: { type: "spring", stiffness: 100, damping: 20 },
-//   },
-// };
-
-// const statVariants = {
-//   hidden: { scale: 0.9, opacity: 0 },
-//   visible: {
-//     scale: 1,
-//     opacity: 1,
-//     transition: { type: "spring", stiffness: 100, damping: 15 },
-//   },
-// };
-
-// export const Hero = () => {
-//   return (
-//     <section className="relative overflow-hidden bg-zinc-50 pt-16 pb-24 md:pt-24 md:pb-36 dark:bg-black font-sans">
-
-//       {/* --- ULTRA ANIMATED BACKGROUND AURORA --- */}
-//       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-//         <motion.div
-//           animate={{
-//             scale: [1, 1.1, 1],
-//             rotate: [0, 5, 0],
-//           }}
-//           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-//           className="absolute top-[-10%] left-1/2 -z-10 h-[600px] w-full -translate-x-1/2 opacity-30 blur-[100px] dark:opacity-20"
-//         >
-//           <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-indigo-600/40" />
-//           <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-secondary/30" />
-//           <div className="absolute top-1/2 left-1/2 h-64 w-64 rounded-full bg-purple-500/20" />
-//         </motion.div>
-//       </div>
-
-//       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-//         <motion.div
-//           variants={containerVariants}
-//           initial="hidden"
-//           animate="visible"
-//           className="flex flex-col items-center text-center"
-//         >
-
-//           {/* --- Top Badge --- */}
-//           <motion.div
-//             variants={itemVariants}
-//             whileHover={{ scale: 1.05 }}
-//             className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-white/80 dark:bg-zinc-900/50 backdrop-blur-md px-4 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-indigo-600 dark:border-white/10 dark:text-indigo-400 shadow-sm"
-//           >
-//             <Sparkles size={14} className="text-secondary animate-pulse" />
-//             Redefining Global Transparency
-//           </motion.div>
-
-//           {/* --- Main Headline --- */}
-//           <motion.h1
-//             variants={itemVariants}
-//             className="mt-8 max-w-5xl text-4xl font-black tracking-tight text-slate-950 sm:text-6xl lg:text-8xl dark:text-white leading-[1.1] sm:leading-[0.95]"
-//           >
-//             Empower Change with <br className="hidden sm:block" />
-//             <span className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-secondary bg-clip-text text-transparent">
-//               Radical Transparency.
-//             </span>
-//           </motion.h1>
-
-//           {/* --- Subtext --- */}
-//           <motion.p
-//             variants={itemVariants}
-//             className="mt-8 max-w-2xl text-base md:text-xl font-medium leading-relaxed text-slate-600 dark:text-slate-400"
-//           >
-//             Oneness connects you directly to verified global projects. Track every single
-//             dollar and witness measurable impact in real-time.
-//           </motion.p>
-
-//           {/* --- CTA Buttons (Synced with Navbar Style) --- */}
-//           <motion.div
-//             variants={itemVariants}
-//             className="mt-10 flex flex-col items-center gap-4 sm:flex-row w-full sm:w-auto"
-//           >
-//             {/* Primary CTA */}
-//             <motion.button
-//               whileHover={{
-//                 scale: 1.02,
-//                 backgroundColor: "#EC9232", // Changes to orange on hover like Navbar
-//               }}
-//               whileTap={{ scale: 0.98 }}
-//               className="flex h-14 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-slate-900 px-10 text-base font-bold text-white transition-all shadow-xl dark:bg-slate-50 dark:text-slate-950"
-//             >
-//               Start Your Impact
-//               <ArrowRight size={18} />
-//             </motion.button>
-
-//             {/* Secondary CTA */}
-//             <motion.button
-//               whileHover={{ scale: 1.02, backgroundColor: "rgba(236, 146, 50, 0.1)" }}
-//               whileTap={{ scale: 0.98 }}
-//               className="flex h-14 w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-8 text-base font-bold text-slate-900 transition-all dark:border-white/10 dark:bg-transparent dark:text-white"
-//             >
-//               View Transparency Report
-//             </motion.button>
-//           </motion.div>
-
-//           {/* --- Stats Section (Fully Responsive Grid) --- */}
-//           <motion.div
-//             variants={containerVariants}
-//             className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-3 w-full max-w-4xl border-t border-slate-200 pt-12 dark:border-white/10"
-//           >
-//             {[
-//               { icon: Globe, val: "12+", lab: "Countries Reached" },
-//               { icon: ShieldCheck, val: "100%", lab: "Audit Verified" },
-//               { icon: Users, val: "50k+", lab: "Active Donors" }
-//             ].map((stat, idx) => (
-//               <motion.div
-//                 key={idx}
-//                 variants={statVariants}
-//                 whileHover={{ y: -5 }}
-//                 className="flex flex-col items-center p-6 rounded-3xl bg-white/50 dark:bg-zinc-900/30 backdrop-blur-sm border border-transparent hover:border-secondary/20 transition-all"
-//               >
-//                 <div className="flex items-center gap-3 mb-1">
-//                   <stat.icon size={22} className="text-secondary" />
-//                   <span className="text-3xl font-black text-slate-950 dark:text-white tracking-tighter">
-//                     {stat.val}
-//                   </span>
-//                 </div>
-//                 <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500 dark:text-slate-400">
-//                   {stat.lab}
-//                 </p>
-//               </motion.div>
-//             ))}
-//           </motion.div>
-
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// };
-
-
-
 "use client";
 
 import React from "react";
@@ -300,7 +145,7 @@ export const Hero = () => {
                 className="relative h-[450px] w-full overflow-hidden rounded-[2.5rem] shadow-2xl"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/photo2.jpg"
                   alt="Impact"
                   className="h-full w-full object-cover transform hover:scale-110 transition-transform duration-700"
                 />
@@ -323,7 +168,7 @@ export const Hero = () => {
                   className="relative h-[215px] w-full overflow-hidden rounded-[2.5rem] shadow-xl"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1931&auto=format&fit=crop"
+                    src="/images/photo3.jpg"
                     alt="Success"
                     className="h-full w-full object-cover"
                   />

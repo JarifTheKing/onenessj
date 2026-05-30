@@ -18,6 +18,7 @@ import {
   X,
   Play,
   Inbox,
+  Beef,
 } from "lucide-react";
 
 // --- CONFIGURATIONS & STATIC DATA ---
@@ -35,10 +36,10 @@ const categories = [
     icon: Flame,
   },
   {
-    id: "food",
-    name: "Food Security",
+    id: "qurbani",
+    name: "Qurbani Donate",
     desc: "Sustainable distributions",
-    icon: Utensils,
+    icon: Beef,
   },
   {
     id: "self",
@@ -55,6 +56,7 @@ const categories = [
 ];
 
 const galleryItems = [
+  // --- Existing Items ---
   {
     id: 1,
     type: "picture",
@@ -118,6 +120,56 @@ const galleryItems = [
     title: "Water Filtration System Assembly",
     location: "Pakistan",
     img: "https://images.unsplash.com/photo-1538300342682-85519b3d9641?auto=format&fit=crop&q=80&w=800",
+  },
+
+  // --- New Qurbani Gallery Items ---
+  {
+    id: 9,
+    type: "picture",
+    category: "qurbani",
+    title: "Qurbani Distribution Day 1",
+    location: "Global",
+    img: "/images/Gallery/Pics1.jpg",
+  },
+  {
+    id: 10,
+    type: "picture",
+    category: "qurbani",
+    title: "Community Meat Distribution",
+    location: "Global",
+    img: "/images/Gallery/Pics2.jpeg",
+  },
+  {
+    id: 11,
+    type: "picture",
+    category: "qurbani",
+    title: "Qurbani Preparation",
+    location: "Global",
+    img: "/images/Gallery/Pics3.jpeg",
+  },
+  {
+    id: 12,
+    type: "picture",
+    category: "qurbani",
+    title: "Distribution Outreach",
+    location: "Global",
+    img: "/images/Gallery/Pics4.jpeg",
+  },
+  {
+    id: 13,
+    type: "picture",
+    category: "qurbani",
+    title: "Sustainable Qurbani Aid",
+    location: "Global",
+    img: "/images/Gallery/Pics5.jpeg",
+  },
+  {
+    id: 14,
+    type: "picture",
+    category: "qurbani",
+    title: "Final Distribution Batch",
+    location: "Global",
+    img: "/images/Gallery/Pics6.jpeg",
   },
 ];
 
